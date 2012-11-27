@@ -18,12 +18,10 @@ class AccountController extends \application\controllers\Controller
     }
 
     public function actionIndex() {
-        die("hi!");
         $this->render("index");
     }
 
     public function actionLogin() {
-        die("hi!");
 		$loginFormModel = new LoginForm();
         $loginFormModel->redirect_url = $_GET['redirect'];
 
