@@ -23,6 +23,7 @@ class AccountController extends \application\controllers\Controller
     }
 
     public function actionLogin() {
+        die("hi!");
 		$loginFormModel = new LoginForm();
         $loginFormModel->redirect_url = $_GET['redirect'];
 
