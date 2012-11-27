@@ -18,6 +18,7 @@ class AccountController extends \application\controllers\Controller
     }
 
     public function actionIndex() {
+        die("hi!");
         $this->render("index");
     }
 
