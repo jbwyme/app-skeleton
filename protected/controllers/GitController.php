@@ -15,6 +15,8 @@ class GitController extends \application\controllers\Controller
     }
 
     public function actionPull($pass) {
+        file_put_contents('/logs/github.log', " --- req - pass: $pass \n\n". print_r($_REQUEST, TRUE), FILE_APPEND);
+
         if ($pass == sha1("git pull plz")) {
             try
             {
