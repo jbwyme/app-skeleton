@@ -1,0 +1,4 @@
+user_id,first_name,middle_name,last_name,email_address,password_hash,activation_key,has_activated
+1,Test,My,User,test_1353802293@test.com,NULL,NULL,0
+2,Malcom,In,Middle,malmalc@itm.com,adsf,NULL,0
+3,Hi,,,,NULL,NULL,0
