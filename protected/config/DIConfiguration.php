@@ -1,7 +1,7 @@
 <?php
 namespace config;
 
-require_once(dirname(__FILE__).DIRECTORY_SEPARATOR."AbstractDiConfiguration.php");
+require_once(dirname(__FILE__).DIRECTORY_SEPARATOR."AbstractDIConfiguration.php");
 /**
 * This class implements my application-specific configuration.
 *
