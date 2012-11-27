@@ -15,7 +15,9 @@ class GitController extends \application\controllers\Controller
     }
 
     public function actionPull() {
-        exec("git pull origin master");
+        echo "start pull <br>";
+        echo exec("git pull origin master")."<br>";
+        echo "pull finished <br>";
 //        try
 //        {
 //            $payload = json_decode($_REQUEST['payload']);
