@@ -16,27 +16,31 @@ class GitController extends \application\controllers\Controller
 
     public function actionPull($pass) {
         file_put_contents('/logs/github.log', " --- req - pass: $pass \n\n". print_r($_REQUEST, TRUE), FILE_APPEND);
-        exec("git pull origin master");
-        if ($pass == sha1("git pull plz")) {
-            try
-            {
-                $payload = json_decode($_REQUEST['payload']);
-            }
-            catch(Exception $e)
-            {
-                exit(0);
-            }
 
-            //log the request
-            file_put_contents('/logs/github.log', print_r($payload, TRUE), FILE_APPEND);
+        echo "start pull <br>";
+        echo exec("git pull origin master")."<br>";
+        echo "pull finished <br>";
 
-
-            if ($payload->ref === 'refs/heads/master')
-            {
-                // path to your site deployment script
-    //            exec(dirname(__FILE__).DIRECTORY_SEPARATOR."..".DIRECTORY_SEPARATOR."shell".DIRECTORY_SEPARATOR."integrate.sh");
-                exec("git pull origin master");
-            }
-        }
+//        if ($pass == sha1("git pull plz")) {
+//            try
+//            {
+//                $payload = json_decode($_REQUEST['payload']);
+//            }
+//            catch(Exception $e)
+//            {
+//                exit(0);
+//            }
+//
+//            //log the request
+//            file_put_contents('/logs/github.log', print_r($payload, TRUE), FILE_APPEND);
+//
+//
+//            if ($payload->ref === 'refs/heads/master')
+//            {
+//                // path to your site deployment script
+//    //            exec(dirname(__FILE__).DIRECTORY_SEPARATOR."..".DIRECTORY_SEPARATOR."shell".DIRECTORY_SEPARATOR."integrate.sh");
+//                exec("git pull origin master");
+//            }
+//        }
     }
 }
